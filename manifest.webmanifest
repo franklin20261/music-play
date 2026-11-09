@@ -1,0 +1,1 @@
+{"name":"MUSIC PLAY","short_name":"MUSIC PLAY","start_url":"./","scope":"./","display":"standalone","background_color":"#08130e","theme_color":"#10251b","description":"Reprodutor de músicas offline","icons":[{"src":"icon.svg","sizes":"any","type":"image/svg+xml","purpose":"any maskable"}]}

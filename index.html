@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+  <meta name="theme-color" content="#10251b">
+  <link rel="manifest" href="manifest.webmanifest">
+  <link rel="icon" href="icon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="style.css">
+  <title>MUSIC PLAY</title>
+</head>
+<body>
+  <main class="app">
+    <header><div class="brand-mark">♫</div><div><h1>MUSIC PLAY</h1><p>Seu som, em qualquer lugar</p></div></header>
+    <section class="panel">
+      <label class="add" for="files">＋ Adicionar músicas do aparelho</label>
+      <input id="files" type="file" accept="audio/*" multiple>
+      <p class="hint">As músicas ficam salvas neste navegador/aparelho. Não são enviadas para a internet.</p>
+    </section>
+    <section class="player panel">
+      <div class="disc"><span>♫</span></div>
+      <div class="track-info"><strong id="title">Nenhuma música selecionada</strong><span id="artist">Escolha uma música para começar</span></div>
+      <audio id="audio" preload="metadata"></audio>
+      <div class="progress"><span id="elapsed">0:00</span><input id="seek" type="range" min="0" max="1000" value="0"><span id="duration">0:00</span></div>
+      <div class="controls">
+        <button id="shuffle" aria-label="Aleatório" title="Aleatório">⤨</button>
+        <button id="prev" aria-label="Anterior" title="Anterior">|◀</button>
+        <button id="play" class="play" aria-label="Reproduzir">▶</button>
+        <button id="next" aria-label="Próxima" title="Próxima">▶|</button>
+        <button id="repeat" aria-label="Repetir" title="Repetir">↻</button>
+      </div>
+      <div class="volume"><label for="vol">Volume</label><input id="vol" type="range" min="0" max="1" step=".01" value=".85"></div>
+      <p id="status" class="status">Pronto para tocar.</p>
+    </section>
+    <section class="panel library">
+      <div class="library-head"><h2>Minha biblioteca</h2><span id="count">0 músicas</span></div>
+      <ul id="list"><li class="empty">Suas músicas aparecerão aqui.</li></ul>
+    </section>
+    <footer>Feito para ouvir suas músicas offline.</footer>
+  </main>
+  <script src="app.js"></script>
+</body>
+</html>

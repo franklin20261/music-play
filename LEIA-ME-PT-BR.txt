@@ -1,0 +1,15 @@
+MUSIC PLAY — versão de teste PWA
+
+1. No notebook, abra o index.html para testar a biblioteca e a reprodução.
+2. Para instalar como aplicativo e usar offline com cache, publique esta pasta em um endereço HTTPS.
+3. No Android, abra o endereço HTTPS no Chrome e use o menu ⋮ > Instalar app (ou Adicionar à tela inicial).
+4. Escolha Adicionar músicas do aparelho e selecione os arquivos de áudio.
+
+TELA BLOQUEADA:
+O app usa a API Media Session quando o navegador e o Android oferecem suporte. Ela pode exibir título e controles de reproduzir/pausar/anterior/próxima na tela de bloqueio. O comportamento varia conforme aparelho, navegador e economia de bateria. Faça o primeiro teste com o Chrome atualizado.
+
+IMPORTANTE:
+- As músicas são armazenadas localmente no navegador via IndexedDB.
+- Limpar os dados do navegador pode apagar a biblioteca.
+- A reprodução em segundo plano e os controles da tela bloqueada dependem do suporte do Android/navegador.
+- Para instalar PWA, é necessário HTTPS ou localhost. Abrir index.html diretamente não habilita instalação nem service worker.
